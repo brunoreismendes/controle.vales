@@ -1,0 +1,96 @@
+object fPesqVTotalPagos: TfPesqVTotalPagos
+  Left = 192
+  Height = 603
+  Top = 389
+  Width = 829
+  Caption = 'Pesquisa Valores Totais Pagos (Clicando 2 vezes será filtrado o nome)'
+  ClientHeight = 603
+  ClientWidth = 829
+  LCLVersion = '1.9.0.0'
+  object DBGrid2: TDBGrid
+    Left = 258
+    Height = 603
+    Top = 0
+    Width = 571
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'idvale'
+        Width = 0
+        Visible = False
+        FieldName = 'idvale'
+      end    
+      item
+        Title.Caption = 'idnome'
+        Width = 0
+        Visible = False
+        FieldName = 'idnome'
+      end    
+      item
+        PickList.Strings = (
+          'bruno'
+          'ceara'
+          'thiago'
+          'fabio'
+        )
+        Title.Caption = 'nome'
+        Width = 300
+        FieldName = 'nome'
+      end    
+      item
+        Title.Caption = 'Total'
+        Width = 150
+        FieldName = 'Total'
+        DisplayFormat = 'R$ 0.00'
+      end>
+    DataSource = DataModule1.DSTblValorTotalPagos
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 603
+    Top = 0
+    Width = 258
+    Align = alLeft
+    Caption = 'Panel1'
+    ClientHeight = 603
+    ClientWidth = 258
+    TabOrder = 1
+    object Button1: TButton
+      Left = 1
+      Height = 25
+      Top = 577
+      Width = 256
+      Align = alBottom
+      Caption = 'Limpar filtro'
+      OnClick = Button1Click
+      TabOrder = 0
+    end
+    object DBGrid3: TDBGrid
+      Left = 1
+      Height = 576
+      Top = 1
+      Width = 256
+      Align = alClient
+      Color = clWindow
+      Columns = <      
+        item
+          Title.Caption = 'idnome'
+          Width = 0
+          Visible = False
+          FieldName = 'idnome'
+        end      
+        item
+          Title.Caption = 'nome'
+          Width = 200
+          FieldName = 'nome'
+        end>
+      DataSource = DataModule1.DSListaNomes
+      ReadOnly = True
+      TabOrder = 1
+      OnDblClick = DBGrid3DblClick
+    end
+  end
+end

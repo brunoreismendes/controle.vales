@@ -1,0 +1,420 @@
+object DataModule1: TDataModule1
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 345
+  HorizontalOffset = 1045
+  VerticalOffset = 386
+  Width = 425
+  PPI = 96
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = False
+    Properties.Strings = (
+      'AutoEncodeStrings='
+    )
+    Port = 0
+    Database = '/home/bruno/vale.db3'
+    Protocol = 'sqlite-3'
+    left = 40
+    top = 16
+  end
+  object TblNomes: TZTable
+    Connection = ZConnection1
+    AfterPost = TblNomesAfterPost
+    AfterDelete = TblNomesAfterPost
+    TableName = 'nomes'
+    left = 29
+    top = 157
+    object TblNomesidnome: TLargeintField
+      FieldKind = fkData
+      FieldName = 'idnome'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object TblNomesnome: TStringField
+      FieldKind = fkData
+      FieldName = 'nome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 120
+    end
+  end
+  object TblVales: TZTable
+    Connection = ZConnection1
+    AfterPost = TblValesAfterPost
+    AfterDelete = TblValesAfterPost
+    TableName = 'vales'
+    left = 104
+    top = 157
+    object TblValesidvale: TLargeintField
+      FieldKind = fkData
+      FieldName = 'idvale'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object TblValesidnome: TLargeintField
+      FieldKind = fkData
+      FieldName = 'idnome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object TblValesdata: TDateField
+      FieldKind = fkData
+      FieldName = 'data'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '!90/00/00;1;_'
+    end
+    object TblValespago: TBooleanField
+      FieldKind = fkData
+      FieldName = 'pago'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayValues = 'True;False'
+    end
+    object StringField1: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nome'
+      Index = 4
+      KeyFields = 'idnome'
+      LookupCache = False
+      LookupDataSet = TblNomes
+      LookupKeyFields = 'idnome'
+      LookupResultField = 'nome'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object TblValesvalor: TCurrencyField
+      FieldKind = fkData
+      FieldName = 'valor'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'R$ 0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+  end
+  object TblNaoPagos: TZTable
+    Connection = ZConnection1
+    TableName = 'naopagos'
+    left = 176
+    top = 157
+    object TblNaoPagosidvale: TLargeintField
+      FieldKind = fkData
+      FieldName = 'idvale'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object TblNaoPagosidnome: TLargeintField
+      FieldKind = fkData
+      FieldName = 'idnome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object TblNaoPagosdata: TDateField
+      FieldKind = fkData
+      FieldName = 'data'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD/MM/YYYY'
+    end
+    object TblNaoPagospago: TBooleanField
+      FieldKind = fkData
+      FieldName = 'pago'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayValues = 'True;False'
+    end
+    object StringField4: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nome'
+      Index = 4
+      KeyFields = 'idnome'
+      LookupCache = False
+      LookupDataSet = TblNomes
+      LookupKeyFields = 'idnome'
+      LookupResultField = 'nome'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object TblNaoPagosvalor: TCurrencyField
+      FieldKind = fkData
+      FieldName = 'valor'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+    end
+  end
+  object DSNomes: TDataSource
+    AutoEdit = False
+    DataSet = TblNomes
+    left = 24
+    top = 224
+  end
+  object DSVales: TDataSource
+    DataSet = TblVales
+    left = 120
+    top = 224
+  end
+  object TblPagos: TZTable
+    Connection = ZConnection1
+    TableName = 'pagos'
+    left = 256
+    top = 157
+    object TblPagosidvale: TLargeintField
+      FieldKind = fkData
+      FieldName = 'idvale'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object TblPagosidnome: TLargeintField
+      FieldKind = fkData
+      FieldName = 'idnome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object TblPagosdata: TDateField
+      FieldKind = fkData
+      FieldName = 'data'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '!90/00/00;1;_'
+    end
+    object TblPagospago: TBooleanField
+      FieldKind = fkData
+      FieldName = 'pago'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayValues = 'True;False'
+    end
+    object StringField5: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nome'
+      Index = 4
+      KeyFields = 'idnome'
+      LookupCache = False
+      LookupDataSet = TblNomes
+      LookupKeyFields = 'idnome'
+      LookupResultField = 'nome'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object TblPagosvalor: TCurrencyField
+      FieldKind = fkData
+      FieldName = 'valor'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+    end
+  end
+  object ValorTotalNaoPagos: TZTable
+    Connection = ZConnection1
+    Filtered = True
+    TableName = 'TotalNaoPagos'
+    left = 192
+    top = 16
+    object ValorTotalNaoPagosidvale: TLargeintField
+      FieldKind = fkData
+      FieldName = 'idvale'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ValorTotalNaoPagosidnome: TLargeintField
+      FieldKind = fkData
+      FieldName = 'idnome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object StringField3: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nome'
+      Index = 2
+      KeyFields = 'idnome'
+      LookupCache = False
+      LookupDataSet = TblNomes
+      LookupKeyFields = 'idnome'
+      LookupResultField = 'nome'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object ValorTotalNaoPagosTotal: TCurrencyField
+      FieldKind = fkData
+      FieldName = 'Total'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+    end
+  end
+  object TblValorTotalPagos: TZTable
+    Connection = ZConnection1
+    Filtered = True
+    TableName = 'TotalPagos'
+    left = 344
+    top = 16
+    object TblValorTotalPagosidvale: TLargeintField
+      FieldKind = fkData
+      FieldName = 'idvale'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object TblValorTotalPagosidnome: TLargeintField
+      FieldKind = fkData
+      FieldName = 'idnome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object StringField2: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nome'
+      Index = 2
+      KeyFields = 'idnome'
+      LookupCache = False
+      LookupDataSet = TblNomes
+      LookupKeyFields = 'idnome'
+      LookupResultField = 'nome'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object TblValorTotalPagosTotal: TCurrencyField
+      FieldKind = fkData
+      FieldName = 'Total'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+    end
+  end
+  object DSValorTotalNaoPagos: TDataSource
+    DataSet = ValorTotalNaoPagos
+    OnDataChange = DSValorTotalNaoPagosDataChange
+    left = 192
+    top = 80
+  end
+  object DSTblValorTotalPagos: TDataSource
+    DataSet = TblValorTotalPagos
+    left = 344
+    top = 80
+  end
+  object DSNaoPagos: TDataSource
+    DataSet = TblNaoPagos
+    left = 176
+    top = 237
+  end
+  object DSPagos: TDataSource
+    DataSet = TblPagos
+    left = 249
+    top = 225
+  end
+  object TblListaNomes: TZTable
+    Connection = ZConnection1
+    TableName = 'nomes'
+    left = 332
+    top = 184
+    object TblListaNomesidnome: TLargeintField
+      FieldKind = fkData
+      FieldName = 'idnome'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object TblListaNomesnome: TStringField
+      FieldKind = fkData
+      FieldName = 'nome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 120
+    end
+  end
+  object DSListaNomes: TDataSource
+    DataSet = TblListaNomes
+    left = 344
+    top = 260
+  end
+end

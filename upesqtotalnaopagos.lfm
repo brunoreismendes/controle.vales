@@ -1,0 +1,96 @@
+object fPesqTotalNaoPagos: TfPesqTotalNaoPagos
+  Left = 737
+  Height = 510
+  Top = 213
+  Width = 795
+  Caption = 'Pesquisa Valores Totais Não Pagos (Clicando 2 vezes será filtrado o nome)'
+  ClientHeight = 510
+  ClientWidth = 795
+  LCLVersion = '1.9.0.0'
+  object DBGrid2: TDBGrid
+    Left = 256
+    Height = 510
+    Top = 0
+    Width = 539
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'idvale'
+        Width = 0
+        Visible = False
+        FieldName = 'idvale'
+      end    
+      item
+        Title.Caption = 'idnome'
+        Width = 0
+        Visible = False
+        FieldName = 'idnome'
+      end    
+      item
+        PickList.Strings = (
+          'bruno'
+          'ceara'
+          'thiago'
+          'fabio'
+        )
+        Title.Caption = 'nome'
+        Width = 300
+        FieldName = 'nome'
+      end    
+      item
+        Title.Caption = 'Total'
+        Width = 150
+        FieldName = 'Total'
+        DisplayFormat = 'R$ 0.00'
+      end>
+    DataSource = DataModule1.DSValorTotalNaoPagos
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 510
+    Top = 0
+    Width = 256
+    Align = alLeft
+    Caption = 'Panel1'
+    ClientHeight = 510
+    ClientWidth = 256
+    TabOrder = 1
+    object Button1: TButton
+      Left = 1
+      Height = 25
+      Top = 484
+      Width = 254
+      Align = alBottom
+      Caption = 'Limpar filtro'
+      OnClick = Button1Click
+      TabOrder = 0
+    end
+    object DBGrid3: TDBGrid
+      Left = 1
+      Height = 483
+      Top = 1
+      Width = 254
+      Align = alClient
+      Color = clWindow
+      Columns = <      
+        item
+          Title.Caption = 'idnome'
+          Width = 0
+          Visible = False
+          FieldName = 'idnome'
+        end      
+        item
+          Title.Caption = 'nome'
+          Width = 200
+          FieldName = 'nome'
+        end>
+      DataSource = DataModule1.DSListaNomes
+      ReadOnly = True
+      TabOrder = 1
+      OnDblClick = DBGrid3DblClick
+    end
+  end
+end

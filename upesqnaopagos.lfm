@@ -1,0 +1,61 @@
+object fPesqNaoPagos: TfPesqNaoPagos
+  Left = 972
+  Height = 448
+  Top = 515
+  Width = 667
+  Caption = 'fPesqNaoPagos'
+  ClientHeight = 448
+  ClientWidth = 667
+  OnShow = FormShow
+  LCLVersion = '1.9.0.0'
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 448
+    Top = 0
+    Width = 667
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'idvale'
+        Width = 0
+        Visible = False
+        FieldName = 'idvale'
+      end    
+      item
+        Title.Caption = 'idnome'
+        Width = 0
+        Visible = False
+        FieldName = 'idnome'
+      end    
+      item
+        PickList.Strings = (
+          'bruno'
+          'ceara'
+          'thiago'
+          'fabio'
+        )
+        Title.Caption = 'nome'
+        Width = 200
+        FieldName = 'nome'
+      end    
+      item
+        Title.Caption = 'data'
+        Width = 80
+        FieldName = 'data'
+        DisplayFormat = 'DD/MM/YYYY'
+      end    
+      item
+        Title.Caption = 'valor'
+        FieldName = 'valor'
+        DisplayFormat = 'R$ 0.00'
+      end    
+      item
+        Title.Caption = 'pago'
+        FieldName = 'pago'
+      end>
+    DataSource = DataModule1.DSNaoPagos
+    TabOrder = 0
+    OnDblClick = DBGrid1DblClick
+  end
+end

@@ -1,0 +1,311 @@
+object fCadVales: TfCadVales
+  Left = 805
+  Height = 598
+  Top = 432
+  Width = 579
+  ActiveControl = Panel1
+  BorderStyle = bsSizeToolWin
+  Caption = 'fCadVales'
+  ClientHeight = 598
+  ClientWidth = 579
+  DesignTimePPI = 119
+  KeyPreview = True
+  OnShow = FormShow
+  LCLVersion = '1.8.2.0'
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 422
+    Top = 176
+    Width = 579
+    Align = alClient
+    AlternateColor = clMoneyGreen
+    AutoEdit = False
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'idvale'
+        Width = 0
+        Visible = False
+        FieldName = 'idvale'
+      end    
+      item
+        Title.Caption = 'idnome'
+        Width = 0
+        Visible = False
+        FieldName = 'idnome'
+      end    
+      item
+        PickList.Strings = (
+          'bruno'
+          'ceara'
+          'thiago'
+          'fabio'
+        )
+        Title.Caption = 'nome'
+        Width = 56
+        FieldName = 'nome'
+      end    
+      item
+        Title.Caption = 'data'
+        Width = 47
+        FieldName = 'data'
+        DisplayFormat = 'DD/MM/YYYY'
+      end    
+      item
+        Title.Caption = 'valor'
+        Width = 52
+        FieldName = 'valor'
+      end    
+      item
+        Title.Caption = 'pago'
+        Width = 51
+        FieldName = 'pago'
+      end>
+    DataSource = DataModule1.DSVales
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns, dgDisableDelete, dgDisableInsert, dgDblClickAutoSize]
+    ReadOnly = True
+    TabOrder = 1
+    TabStop = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 176
+    Top = 0
+    Width = 579
+    Align = alTop
+    ClientHeight = 176
+    ClientWidth = 579
+    TabOrder = 0
+    object Panel2: TPanel
+      Left = 1
+      Height = 62
+      Top = 113
+      Width = 577
+      Align = alBottom
+      ClientHeight = 62
+      ClientWidth = 577
+      TabOrder = 0
+      object DBNavigator1: TDBNavigator
+        Left = 1
+        Height = 31
+        Top = 30
+        Width = 575
+        Align = alBottom
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 31
+        ClientWidth = 575
+        DataSource = DataModule1.DSVales
+        OnClick = DBNavigator1Click
+        Options = []
+        TabOrder = 0
+        VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
+      end
+      object ToolBar1: TToolBar
+        Left = 1
+        Height = 26
+        Top = 1
+        Width = 575
+        ShowCaptions = True
+        TabOrder = 1
+        object CadVButNovo: TToolButton
+          Left = 6
+          Top = 2
+          AutoSize = True
+          Caption = '&Novo'
+          OnClick = CadVButNovoClick
+        end
+        object CadVButEdit: TToolButton
+          Left = 58
+          Top = 2
+          Caption = '&Editar'
+          OnClick = CadVButEditClick
+        end
+        object ToolButton4: TToolButton
+          Left = 110
+          Height = 27
+          Top = 2
+          Caption = 'ToolButton4'
+          Style = tbsDivider
+        end
+        object CadVButIns: TToolButton
+          Left = 115
+          Top = 2
+          Caption = '&Inserir'
+          Enabled = False
+          OnClick = CadVButInsClick
+        end
+        object ToolButton7: TToolButton
+          Left = 171
+          Height = 27
+          Top = 2
+          Caption = 'ToolButton7'
+          Style = tbsDivider
+        end
+        object CadVButCancel: TToolButton
+          Left = 176
+          Top = 2
+          Caption = '&Cancelar'
+          Enabled = False
+          OnClick = CadVButCancelClick
+        end
+        object ToolButton10: TToolButton
+          Left = 251
+          Height = 27
+          Top = 2
+          Caption = 'ToolButton10'
+          Style = tbsDivider
+        end
+        object CadVButDel: TToolButton
+          Left = 256
+          Top = 2
+          Caption = '&Apagar'
+          OnClick = CadVButDelClick
+        end
+        object ToolButton14: TToolButton
+          Left = 53
+          Height = 27
+          Top = 2
+          Caption = 'ToolButton14'
+          Style = tbsDivider
+        end
+        object ToolButton17: TToolButton
+          Left = 317
+          Height = 27
+          Top = 2
+          Caption = 'ToolButton17'
+          Style = tbsDivider
+        end
+        object ToolButton3: TToolButton
+          Left = 1
+          Height = 27
+          Top = 2
+          Caption = 'ToolButton3'
+          Style = tbsDivider
+        end
+      end
+    end
+    object Panel3: TPanel
+      Left = 1
+      Height = 112
+      Top = 1
+      Width = 577
+      Align = alClient
+      ClientHeight = 112
+      ClientWidth = 577
+      Enabled = False
+      TabOrder = 1
+      object DBDateEdit1: TDBDateEdit
+        Left = 53
+        Height = 27
+        Top = 64
+        Width = 137
+        CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+        DateOrder = doNone
+        DateFormat = 'DD/MM/YYYY'
+        ButtonWidth = 23
+        NumGlyphs = 1
+        FocusOnButtonClick = True
+        Font.Color = clMaroon
+        MaxLength = 0
+        ParentFont = False
+        TabOrder = 0
+        Text = '25/12/2017'
+        DataField = 'data'
+        DataSource = DataModule1.DSVales
+      end
+      object DBLookupComboBox1: TDBLookupComboBox
+        Left = 63
+        Height = 29
+        Top = 15
+        Width = 289
+        AutoComplete = True
+        AutoDropDown = True
+        DataField = 'idnome'
+        DataSource = DataModule1.DSVales
+        Font.Color = clPurple
+        KeyField = 'idnome'
+        ListField = 'nome'
+        ListFieldIndex = 0
+        ListSource = DataModule1.DSNomes
+        LookupCache = False
+        ParentFont = False
+        TabOrder = 1
+      end
+      object DBRadioGroup1: TDBRadioGroup
+        Left = 432
+        Height = 85
+        Top = 15
+        Width = 105
+        DataField = 'pago'
+        DataSource = DataModule1.DSVales
+        Items.Strings = (
+          'Pago'
+          'Não Pago'
+        )
+        TabOrder = 2
+        Values.Strings = (
+          'True'
+          'False'
+        )
+      end
+      object RxDBCurrEdit1: TRxDBCurrEdit
+        Left = 288
+        Height = 27
+        Top = 64
+        Width = 99
+        Alignment = taRightJustify
+        CheckOnExit = True
+        DisplayFormat = 'R$ 0.00'
+        Enabled = False
+        Font.Color = clBlue
+        MaxValue = 0
+        MinValue = 0
+        ParentFont = False
+        TabOrder = 3
+        Value = 10
+        DataField = 'valor'
+        DataSource = DataModule1.DSVales
+      end
+      object Label3: TLabel
+        Left = 243
+        Height = 19
+        Top = 70
+        Width = 48
+        Caption = 'Valor :'
+        ParentColor = False
+      end
+      object Label2: TLabel
+        Left = 14
+        Height = 19
+        Top = 70
+        Width = 45
+        Caption = 'Data :'
+        ParentColor = False
+      end
+      object Label1: TLabel
+        Left = 14
+        Height = 19
+        Top = 21
+        Width = 54
+        Caption = 'Nome :'
+        ParentColor = False
+      end
+      object DBText1: TDBText
+        Left = 448
+        Height = 19
+        Top = 72
+        Width = 63
+        DataField = 'idvale'
+        DataSource = DataModule1.DSVales
+        ParentColor = False
+        Visible = False
+      end
+    end
+  end
+end

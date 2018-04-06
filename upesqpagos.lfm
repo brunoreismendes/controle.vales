@@ -1,0 +1,63 @@
+object fPesqPagos: TfPesqPagos
+  Left = 975
+  Height = 618
+  Top = 158
+  Width = 867
+  Caption = 'fPesqPagos'
+  ClientHeight = 618
+  ClientWidth = 867
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '1.9.0.0'
+  object DBGrid2: TDBGrid
+    Left = 0
+    Height = 618
+    Top = 0
+    Width = 867
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'idvale'
+        Width = 0
+        Visible = False
+        FieldName = 'idvale'
+      end    
+      item
+        Title.Caption = 'idnome'
+        Width = 0
+        Visible = False
+        FieldName = 'idnome'
+      end    
+      item
+        PickList.Strings = (
+          'bruno'
+          'ceara'
+          'thiago'
+          'fabio'
+        )
+        Title.Caption = 'nome'
+        Width = 440
+        FieldName = 'nome'
+      end    
+      item
+        Title.Caption = 'valor'
+        Width = 200
+        FieldName = 'valor'
+        DisplayFormat = 'R$ 0.00'
+      end    
+      item
+        Title.Caption = 'data'
+        Width = 90
+        FieldName = 'data'
+        DisplayFormat = 'DD/MM/YYYY'
+      end    
+      item
+        Title.Caption = 'pago'
+        Visible = False
+        FieldName = 'pago'
+      end>
+    DataSource = DataModule1.DSPagos
+    TabOrder = 0
+  end
+end

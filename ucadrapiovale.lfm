@@ -1,0 +1,142 @@
+object fcadrapido: Tfcadrapido
+  Left = 365
+  Height = 124
+  Top = 268
+  Width = 636
+  ActiveControl = DBLookupComboBox1
+  Caption = 'Cadastro de Vales (simples)'
+  ClientHeight = 124
+  ClientWidth = 636
+  DesignTimePPI = 120
+  KeyPreview = True
+  OnShow = FormShow
+  Visible = False
+  object Label1: TLabel
+    Left = 24
+    Height = 20
+    Top = 8
+    Width = 48
+    Caption = 'Nome :'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 20
+    Top = 56
+    Width = 39
+    Caption = 'Data :'
+    ParentColor = False
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 74
+    Height = 28
+    Top = 2
+    Width = 245
+    AutoComplete = True
+    DataField = 'idnome'
+    DataSource = DataModule1.DSVales
+    KeyField = 'idnome'
+    ListField = 'nome'
+    ListFieldIndex = 0
+    ListSource = DataModule1.DSNomes
+    LookupCache = False
+    OnKeyPress = DBLookupComboBox1KeyPress
+    TabOrder = 0
+  end
+  object Label3: TLabel
+    Left = 336
+    Height = 20
+    Top = 8
+    Width = 41
+    Caption = 'Valor :'
+    ParentColor = False
+  end
+  object RxDBCurrEdit1: TRxDBCurrEdit
+    Left = 384
+    Height = 28
+    Top = 2
+    Width = 123
+    Alignment = taRightJustify
+    CheckOnExit = True
+    DisplayFormat = 'R$ 0.00'
+    Enabled = False
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 1
+    Value = 10
+    OnKeyPress = RxDBCurrEdit1KeyPress
+    DataField = 'valor'
+    DataSource = DataModule1.DSVales
+  end
+  object DBCheckBox1: TDBCheckBox
+    Left = 352
+    Height = 23
+    Top = 56
+    Width = 90
+    Caption = 'Pago'
+    DataField = 'pago'
+    DataSource = DataModule1.DSVales
+    TabOrder = 2
+    ValueChecked = 'True'
+    ValueUnchecked = 'False'
+  end
+  object DBDateEdit1: TDBDateEdit
+    Left = 64
+    Height = 28
+    Top = 49
+    Width = 248
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DateOrder = doNone
+    ButtonWidth = 23
+    NumGlyphs = 1
+    MaxLength = 0
+    TabStop = False
+    TabOrder = 3
+    Text = 'DBDateEdit1'
+    DataField = 'data'
+    DataSource = DataModule1.DSVales
+  end
+  object Button1: TButton
+    Left = 53
+    Height = 25
+    Top = 88
+    Width = 75
+    Caption = 'Concluido'
+    OnClick = Button1Click
+    TabOrder = 4
+  end
+  object Button2: TButton
+    Left = 152
+    Height = 25
+    Top = 88
+    Width = 75
+    Caption = 'Cancelar'
+    OnClick = Button2Click
+    TabOrder = 5
+  end
+  object Button3: TButton
+    Left = 256
+    Height = 25
+    Top = 88
+    Width = 75
+    Caption = 'Calculadora'
+    OnClick = Button3Click
+    TabOrder = 6
+  end
+  object CalculatorDialog1: TCalculatorDialog
+    OnClose = CalculatorDialog1Close
+    OnCanClose = CalculatorDialog1CanClose
+    Value = 0
+    OnChange = CalculatorDialog1Change
+    ColorBtnDigits = clBlack
+    ColorBtnMemory = clNavy
+    ColorBtnOk = clGreen
+    ColorBtnCancel = clMaroon
+    ColorBtnClear = clRed
+    ColorBtnOthers = clBlack
+    ColorDisplayText = clBlack
+    ColorDisplayBack = clWhite
+    left = 512
+    top = 40
+  end
+end

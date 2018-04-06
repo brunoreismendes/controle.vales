@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="19">
+      <Unit0>
+        <Filename Value="contrvales.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="63" Y="6"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="uprinc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fprincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uPrinc"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="39"/>
+        <CursorPos X="3" Y="64"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="ucadnomes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fCadNomes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCadNomes"/>
+        <EditorIndex Value="1"/>
+        <CursorPos Y="37"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="udatamodules.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DataModule1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uDataModules"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="62"/>
+        <CursorPos X="3" Y="112"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="ucadvales.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fCadVales"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCadVales"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="108"/>
+        <CursorPos X="22" Y="110"/>
+        <UsageCount Value="34"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="upesqpagos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fPesqPagos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uPesqPagos"/>
+        <EditorIndex Value="7"/>
+        <CursorPos X="22" Y="41"/>
+        <UsageCount Value="33"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="upesqtotalpagos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fPesqVTotalPagos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="9"/>
+        <CursorPos X="57" Y="23"/>
+        <UsageCount Value="33"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="upesqnaopagos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fPesqNaoPagos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="6"/>
+        <CursorPos X="99" Y="20"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="upesqtotalnaopagos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fPesqTotalNaoPagos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uPesqTotalNaoPagos"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="16"/>
+        <CursorPos X="44" Y="44"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="uconfig.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fConfig"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="43" Y="46"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="ucadrapiovale.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fcadrapido"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="66"/>
+        <CursorPos X="21" Y="89"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="udm.pas"/>
+        <ComponentName Value="DM"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7"/>
+        <CursorPos X="77" Y="12"/>
+        <UsageCount Value="26"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="../../.lazarus/onlinepackagemanager/packages/zeosdbo-7.1.4/src/component/ZAbstractDataset.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="412"/>
+        <CursorPos Y="431"/>
+        <UsageCount Value="12"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="/AppData/Local/lazarus/onlinepackagemanager/packages/zeosdbo-7.1.4/src/plain/ZPlainLoader.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="227"/>
+        <CursorPos Y="240"/>
+        <UsageCount Value="11"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="../.lazarus/onlinepackagemanager/packages/Rx/rxdb/rxdbgrid.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="6385"/>
+        <CursorPos X="7" Y="6396"/>
+        <UsageCount Value="11"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="../lazarus/lcl/include/wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4062"/>
+        <CursorPos Y="4076"/>
+        <UsageCount Value="10"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="../lazarus/lcl/include/customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2292"/>
+        <CursorPos Y="2307"/>
+        <UsageCount Value="10"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="../../.lazarus/onlinepackagemanager/packages/Rx/rxdb/rxdbgrid.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="6394"/>
+        <CursorPos X="6" Y="6410"/>
+        <UsageCount Value="11"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="../../lazarus/lcl/editbtn.pas"/>
+        <UnitName Value="EditBtn"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="785"/>
+        <CursorPos X="14" Y="583"/>
+        <UsageCount Value="11"/>
+      </Unit18>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="106" Column="38" TopLine="82"/>
+      </Position1>
+      <Position2>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="103" Column="59" TopLine="83"/>
+      </Position2>
+      <Position3>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="98" Column="23" TopLine="83"/>
+      </Position3>
+      <Position4>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="99" Column="49" TopLine="85"/>
+      </Position4>
+      <Position5>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="104" Column="16" TopLine="95"/>
+      </Position5>
+      <Position6>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="103" Column="16" TopLine="94"/>
+      </Position6>
+      <Position7>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="102" Column="16" TopLine="93"/>
+      </Position7>
+      <Position8>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="101" Column="16" TopLine="92"/>
+      </Position8>
+      <Position9>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="102" Column="16" TopLine="93"/>
+      </Position9>
+      <Position10>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="103" Column="16" TopLine="94"/>
+      </Position10>
+      <Position11>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="102" Column="16" TopLine="93"/>
+      </Position11>
+      <Position12>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="79" Column="3" TopLine="77"/>
+      </Position12>
+      <Position13>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="81" Column="3" TopLine="79"/>
+      </Position13>
+      <Position14>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="98" Column="29" TopLine="79"/>
+      </Position14>
+      <Position15>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="97" Column="29" TopLine="78"/>
+      </Position15>
+      <Position16>
+        <Filename Value="udatamodules.pas"/>
+        <Caret Line="74" Column="123" TopLine="71"/>
+      </Position16>
+      <Position17>
+        <Filename Value="udatamodules.pas"/>
+        <Caret Line="112" Column="3" TopLine="88"/>
+      </Position17>
+      <Position18>
+        <Filename Value="upesqnaopagos.pas"/>
+        <Caret Line="35" Column="30" TopLine="11"/>
+      </Position18>
+      <Position19>
+        <Filename Value="upesqnaopagos.pas"/>
+        <Caret Line="41" Column="20" TopLine="17"/>
+      </Position19>
+      <Position20>
+        <Filename Value="upesqpagos.pas"/>
+        <Caret Line="21" Column="96" TopLine="11"/>
+      </Position20>
+      <Position21>
+        <Filename Value="ucadvales.pas"/>
+        <Caret Line="101" Column="25" TopLine="76"/>
+      </Position21>
+      <Position22>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="61" Column="24" TopLine="72"/>
+      </Position22>
+      <Position23>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="80" Column="63" TopLine="64"/>
+      </Position23>
+      <Position24>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="90" Column="4" TopLine="53"/>
+      </Position24>
+      <Position25>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="81" Column="17" TopLine="57"/>
+      </Position25>
+      <Position26>
+        <Filename Value="uconfig.pas"/>
+        <Caret Line="38" Column="62"/>
+      </Position26>
+      <Position27>
+        <Filename Value="uconfig.pas"/>
+        <Caret Line="45" Column="62"/>
+      </Position27>
+      <Position28>
+        <Filename Value="uconfig.pas"/>
+        <Caret Line="42" Column="85"/>
+      </Position28>
+      <Position29>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="89" Column="3" TopLine="54"/>
+      </Position29>
+      <Position30>
+        <Filename Value="ucadrapiovale.pas"/>
+        <Caret Line="99" Column="7" TopLine="74"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
